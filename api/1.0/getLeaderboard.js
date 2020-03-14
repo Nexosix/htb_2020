@@ -3,7 +3,7 @@ const pool = require(__basedir + "/config/database.js");
 const getLeaderboard = async function (req, res) {
 
     try{
-        let Leaderboard = await pool.query("SELECT * FROM leaderboard");
+        let Leaderboard = await pool.query("SELECT * FROM leaderboard ORDER BY score DESC");
 
         res.json({
             status: 'success',
