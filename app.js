@@ -7,6 +7,7 @@ const app = express();
 const port = 1337;
 
 app.use(cors());
+app.use(express.urlencoded());
 
 app.get('/', (req, res) => {
     res.send("Hello world!");
